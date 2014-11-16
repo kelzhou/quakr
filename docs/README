@@ -1,1 +1,42 @@
-README file
+README
+
+Data Files (under both /data and /src)
+
+profiles.csv:
+USER_ID	
+NAME	
+EMAIL	
+GENDER	
+INTERESTED_IN	
+DOB	MAJOR	
+RELATIONSHIP_EXPERIENCE	
+LOOKING_FOR	WORDS	
+INTERESTS	
+PET_PEEVE	
+MATCH_REV	
+MATCHES
+
+pairs.csv
+USER1_ID
+USER2_ID		
+
+matches.csv
+USER1_ID	
+USER2_ID	
+MATCH (0/1)	
+REASON
+
+Source Code (under /src)
+
+Quality Control (/src/qc.py)
+- the quality control script
+- input: profiles
+- output: pairings [(user1id, user2id)...]
+
+Aggregation (/src/aggr.py)
+- aggregation module
+- input: pairings
+- create: matches
+- output: matches
+	- match probabilities {"user1id-user2id": approval rating}
+	- successful matches {"user": [list of matches]}
