@@ -1,4 +1,5 @@
-README
+README for Quakr
+An crowdsourced dating application
 
 Data Files (under both /data and /src)
 
@@ -8,9 +9,11 @@ NAME
 EMAIL	
 GENDER	
 INTERESTED_IN	
-DOB	MAJOR	
+DOB	
+MAJOR	
 RELATIONSHIP_EXPERIENCE	
-LOOKING_FOR	WORDS	
+LOOKING_FOR	
+WORDS	
 INTERESTS	
 PET_PEEVE	
 MATCH_REV	
@@ -38,5 +41,5 @@ Aggregation (/src/aggr.py)
 - input: pairings
 - create: matches
 - output: matches
-	- match probabilities {"user1id-user2id": approval rating}
-	- successful matches {"user": [list of matches]}
+	- match probabilities {"user1id-user2id": approval rating, ...}
+	- successful matches {"user": [list of matches], ...}
