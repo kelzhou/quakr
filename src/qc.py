@@ -13,9 +13,10 @@ def read_profiles(file):
 
 def pairing():
 	for i, u in enumerate(users):
+		curr_gender = profiles[u]["GENDER"]
 		interested_in = profiles[u]["INTERESTED_IN"]
 		for u2 in users[i+1:]:
-			if interested_in is profiles[u2]["GENDER"]:
+			if (profiles[u2]["GENDER"] in interested_in) and (curr_gender in profiles[u2]["INTERESTED_IN"]):
 				pairs.append((u,u2))
 	
 	print pairs
